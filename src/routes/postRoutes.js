@@ -1,12 +1,24 @@
+/**
+ * @swagger
+ * /posts/{id}:
+ *   put:
+ *     summary: Update postingan
+ *     tags: [Posts]
+ *     ...
+ *   delete:
+ *     summary: Hapus postingan
+ *     ...
+ */
+
 // src/routes/postRoutes.js
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const postController = require('../controller/postController');
+const postController = require("../controller/postController");
 
 // Update post
-router.put('/posts/:id', postController.updatePost);
+router.put("/posts/:id", postController.updatePost);
 
 // Delete post
-router.delete('/posts/:id', postController.deletePost);
+router.delete("/posts/:id", postController.deletePost);
 
 module.exports = router;
